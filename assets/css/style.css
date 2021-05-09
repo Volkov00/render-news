@@ -1,0 +1,92 @@
+:root {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+}
+.myNews {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.localInformation {
+  background-color: white;
+  padding: 20px;
+  margin: 30px 0;
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.content {
+  padding: 20px 0;
+}
+.titleInformation {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.dataNews {
+  align-self: center;
+  font-size: 15px;
+  color: gray;
+}
+.myForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  padding: 50px;
+}
+.myBlockForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.fname,
+.lname {
+  margin: 15px 0;
+}
+textarea {
+  height: 10em;
+  width: 50em;
+  margin: 20px 0;
+}
+.myBtn {
+  width: 30%;
+  margin: 0 auto 15px;
+}
+.myArea {
+  margin: 20px 0;
+}
+
+.myBtnCancel {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.addNews {
+  position: fixed;
+  width: 100%;
+  top: 84%;
+  left: 39%;
+  display: block;
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+.fas {
+  font-size: 50px;
+  color: green;
+}
+
+.hide {
+  display: none;
+}
