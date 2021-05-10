@@ -73,15 +73,17 @@ textarea {
 
 .addNews {
   position: fixed;
-  width: 100%;
   top: 84%;
-  left: 39%;
-  display: block;
-  outline: none;
   border: none;
+  left: 89%;
   background-color: inherit;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
+.addNews:hover {
+  transform: rotate(180deg);
+  color: rebeccapurple;
+}
 .fas {
   font-size: 50px;
   color: green;
@@ -89,4 +91,21 @@ textarea {
 
 .hide {
   display: none;
+}
+
+.doc-header {
+}
+.container-header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: orange;
+  padding: 20px;
+}
+.search-inp {
+  box-shadow: -2px 6px 15px 11px rgba(0, 0, 0, 0.2) inset;
+}
+.head-logo {
+  font-size: 35px;
+  font-family: sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
