@@ -2,7 +2,11 @@
 //==================================================>
 const itemCard = data.map((item) => createCard(item));
 const mySection = document.querySelector(".myNews");
-const search = document.querySelector(".search-inp");
+const searchForm = document.querySelector(".searchForm");
+
+const {
+  elements: { search },
+} = searchForm;
 const btn = createElement("button", {
   classNames: ["addNews", "fas", "fa-plus-circle"],
 });
@@ -96,7 +100,7 @@ const newFormAdd = () => {
       newText: myInput.value,
       dataPublication: new Date().toLocaleDateString(),
     };
-    data.push(postObj);
+    data.unshift(postObj);
     mySection.prepend(createCard(postObj));
   });
 };
@@ -109,10 +113,21 @@ btn.addEventListener("click", hiddenBtn);
 function showBtn({ target }) {
   target.style.display = "block";
 }
-search.addEventListener("keyup", (e) => {
-  data.filter((item) => {
-    if (item.title.includes(e.key)) {
-      console.log(1);
-    }
-  });
+//search form=====================>
+function renderNews(data) {
+  clearChildren(mySection);
+  mySection.prepend(...data.map((item) => createCard(item)));
+}
+function clearChildren(container) {
+  while (container.firstChild) {
+    container.firstChild.remove();
+  }
+  container.append(btn);
+}
+
+search.addEventListener("keyup", ({ target: { value: searchStr } }) => {
+  const foundData = data.filter((item) =>
+    item.title.includes(searchStr.toLowerCase())
+  );
+  renderNews(foundData);
 });

@@ -42,6 +42,7 @@ body {
   background-color: white;
   padding: 50px;
 }
+
 .myBlockForm {
   display: flex;
   justify-content: center;
@@ -93,11 +94,7 @@ textarea {
   display: none;
 }
 
-.doc-header {
-}
 .container-header {
-  display: flex;
-  justify-content: space-evenly;
   background-color: orange;
   padding: 20px;
 }
@@ -108,4 +105,8 @@ textarea {
   font-size: 35px;
   font-family: sans-serif;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.searchForm {
+  display: flex;
+  justify-content: space-evenly;
 }
